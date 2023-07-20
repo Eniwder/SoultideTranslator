@@ -36,6 +36,7 @@ export default {
       display: {
         '{bksp}': 'BS',
         '{enter}': 'Enter',
+        "{space}": 'Space'
       }
     });
   },
@@ -68,7 +69,8 @@ div {
 </style>
 <style>
 .hg-button-bksp,
-.hg-button-enter {
+.hg-button-enter,
+.hg-button-space {
   font-family: Arial, Helvetica, sans-serif
 }
 
