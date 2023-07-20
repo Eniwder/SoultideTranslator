@@ -32,6 +32,10 @@ export default {
           "z x c v b n m",
           "{space}"
         ]
+      },
+      display: {
+        '{bksp}': 'BS',
+        '{enter}': 'Enter',
       }
     });
   },
