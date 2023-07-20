@@ -1,4 +1,4 @@
-# Soultide Translator
+# SoulTide Translator
 [https://eniwder.github.io/SoultideTranslator/](https://eniwder.github.io/SoultideTranslator/)
 
 You can translate between languages in Soultide and English.

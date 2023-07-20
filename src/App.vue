@@ -7,7 +7,7 @@
     </v-app-bar>
     <v-main>
       <div>
-        <p>Soultide</p>
+        <p>SoulTide</p>
         <v-textarea v-model="text" class="lang-st" rows="3"></v-textarea>
         <SimpleKeyboard @onChange="onVChange" :input="text" />
       </div>
