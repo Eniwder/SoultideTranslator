@@ -30,14 +30,15 @@ function onVChange(input) {
 }
 
 onMounted(() => {
-  const _text = window.location.pathname.substring(1);
-  if (_text !== "") {
-    text.value = _text.replace('%0A', '\n');
+  // const _text = window.location.pathname.replace(/.+\/(.+)/, '$1').substring(1);
+  const _text = window.location.search.match(/\?text=(.+)/)
+  if (_text) {
+    text.value = _text[1].replaceAll('%0A', '\n').replaceAll('%20', ' ').replace(/%[a-zA-Z0-9][a-zA-Z0-9]/g, '');
   }
 })
 
 watch(text, () => {
-  window.history.replaceState(null, '', `/${text.value.replace('\n', '%0A')}`);
+  window.history.replaceState(null, '', `?text=${text.value.replaceAll('\n', '%0A')}`);
 })
 
 
