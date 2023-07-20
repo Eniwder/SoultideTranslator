@@ -8,13 +8,13 @@
     <v-main>
       <div>
         <p>Soultide</p>
-        <v-textarea v-model="text" class="lang-st"></v-textarea>
+        <v-textarea v-model="text" class="lang-st" rows="3"></v-textarea>
         <SimpleKeyboard @onChange="onVChange" :input="text" />
       </div>
       <div>
         <img src="@/assets/arrow.png" class="arrow">
         <p>English</p>
-        <v-textarea v-model="text" class="lang-en"></v-textarea>
+        <v-textarea v-model="text" class="lang-en" rows="3"></v-textarea>
       </div>
     </v-main>
   </v-app>
@@ -41,8 +41,6 @@ watch(text, () => {
   window.history.replaceState(null, '', `?text=${text.value.replaceAll('\n', '%0A')}`);
 })
 
-
-
 </script>
 
 <style>
@@ -62,6 +60,7 @@ main {
 
 img {
   display: flex;
+  width: 12px;
 }
 
 @font-face {
